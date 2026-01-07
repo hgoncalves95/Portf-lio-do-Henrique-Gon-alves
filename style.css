@@ -1,0 +1,546 @@
+/* Zera as margens e estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0f1c;
+}
+
+/* Menu principal */
+nav {
+    background-color: #0a0f1c;
+    padding: 15px 0px;
+}
+
+/* Lista flexível */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Links */
+
+nav ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Efeito hover */
+nav ul li a:hover {
+    color: #1c2230;
+    transform: scale(1.05);
+}
+
+/* Icones */
+nav ul li a i {
+    font-size: 18px;
+}
+/* TÍTULOS */
+h2 {
+    color: #e0e7ff;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #0a0f1c;
+    color: #e0e7ff;
+    padding: 50px 20px;
+}
+
+/* FOTO DE PERFIL */
+.hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1c2230;
+    margin-bottom: 20px;
+}
+
+/* TEXTO PRINCIPAL */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .highlight {
+    color: #e0e7ff;
+    font-weight: bold;
+}
+
+/* PARÁGRAFO */
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* BOTÕES */
+.hero-buttons .btn {
+    text-decoration: none;
+    background-color: #00ffff;
+    color: #0a0f1c;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3 ease;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #1c2230;
+    transform: scale(1.05);
+}
+
+/* ABOUT SECTION */
+.about {
+    background: #0a0f1c;
+    padding: 60px 20px;
+    text-align: center;
+}
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about h2 {
+    font-size: 2.3rem;
+    color: #e0e7ff;
+    margin-bottom: 20px;
+    position: relative;
+}
+.about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e0e7ff;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+.about p {
+    font-size: 1.1rem;
+    color: #e0e7ff;
+    line-height: 1.6;
+}
+
+/* SKILLS SECTION */
+.skills {
+    background: #0a0f1c;
+    padding: 80px 20px;
+    text-align: center;
+}
+.skills h2 {
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+    color: #e0e7ff;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* CARDS */
+.skill-card {
+    background: #1c2230;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+.skill-card:nth-child(odd) {
+    background: #1c2230;
+}
+
+.skill-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.skill-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.skill-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.skill-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.skill-card:nth-child(5) {
+    animation-delay: 1s;
+}
+.skill-card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* ÍCONES */
+.skill-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.skill-card:hover .skill-icon {
+    transform:  scale(1.15);
+}
+
+/* CORES PERSONALIZADAS */
+.skill-card.html {
+    border-top: 6px solid #e44d26;
+}
+.skill-card.css {
+    border-top: 6px solid #1572b6;
+}
+.skill-card.js {
+    border-top: 6px solid #f7df1e;
+}
+.skill-card.java {
+    border-top: 6px solid #007396;
+}
+.skill-card.python {
+    border-top: 6px solid #3776ab;
+}
+.skill-card.sql {
+    border-top: 6px solid #f29111;
+}
+/* TÍTULOS E TEXTOS */
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #007bff;
+}
+
+.skill-card p {
+    color: #a8b2d1;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+    to {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Projects section styles */
+.projects {
+    padding: 80px 20px;
+    background-color: #0a0f1c;
+    color: #0a0f1c;
+    text-align: center;
+}
+.projects h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #e0e7ff;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.project-card {
+    background: #0a0f1c;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+}
+.project-card h3 {
+    color: #e0e7ff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.project-card p {
+    color: #e0e7ff;
+    margin-bottom: 16px;
+    line-height: 1.45;
+}
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    background:#00ffff ;
+    color: #0a0f1c;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    
+}
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+      color: #1c2230;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 520px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero p { font-size: 1rem; }
+    .project-list { gap: 16px; }
+}
+
+/* CONTACT SECTION */
+.contact {
+    background: #0a0f1c;
+    padding: 70px 20px;
+    text-align: center;
+}
+.contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact h2 {
+    font-size: 2.4rem;
+    color: #e0e7ff;
+    margin-bottom: 20px;
+}
+.contact h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: #e0e7ff;
+    opacity: 0.5;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+.contact h3 {
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.contact p {
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+.contact details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #e0e7ff;
+}
+.contact-item i {
+    font-size: 1.3rem;
+    color: #e0e7ff;
+}
+.contact-item a {
+    color: #e0e7ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-item a:hover {
+    color: #e0e7ff;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.contact-form label {
+    color: #e0e7ff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+}
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #1c2230;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #F5F5F5;
+    outline: none;
+}
+.contact-form button {
+    width: 150px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #00ffff;
+    color: #0a0f1c;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #1c2230;
+    transform: scale(1.05);
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .contact-form button {
+        width: 100%;
+    }
+}
+/* FOOTER */
+footer {
+    background-color: #0a0f1c;
+    color: #e0e7ff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #e0e7ff;
+}
+
+/* container dos links */
+.social-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* link (caixa clicável) */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;               /* espaço entre imagem e (se existir) ícone/texto */
+    padding: 6px;
+    background: #1c2230;
+    border-radius: 10px;    /* quadrado com cantos arredondados */
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* imagem dentro do quadrado — faz ela pequena e centralizada */
+.social-links a img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;     /* use contain se quiser ver toda a imagem sem crop */
+    display: block;
+    border-radius: 8px;     /* mantém o formato quadrado com cantos suaves */
+}
+
+/* hover / foco — interação */
+.social-links a:hover,
+.social-links a:focus {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(15,23,42,0.12);
+    filter: saturate(1.08);
+}
+
+/* foco visível para acessibilidade */
+.social-links a:focus {
+    outline: 3px solid rgba(99,102,241,0.18);
+    outline-offset: 4px;
+}
+
+/* opcional: esconder os ícones <i> se estiver usando apenas as imagens */
+.social-links a i {
+    display: none;
+}
+
+/* responsivo: tamanho menor em telas pequenas */
+@media (max-width: 480px) {
+    .social-links a img { width: 40px; height: 40px; }
+    .social-links { gap: 8px; }
+}
